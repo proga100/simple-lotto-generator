@@ -7,7 +7,7 @@
   
   
   
-      <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="css/main_lotto.css">
 
   
 </head>
@@ -19,79 +19,1029 @@
 <head>
     <meta charset="UTF-8">
     <title>Lotto Generator</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link href='https://fonts.googleapis.com/css?family=Chewy' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
-    <h1>Lotto Generator</h1>
 
-    <div class="position floatfix">
-       
-        <div id="history"></div>
+                 <div class="position floatfix">
 
-        <div class="wrapper">
-            <p class="ball">1</p>
-            <p class="ball">2</p>
-            <p class="ball">3</p>
-            <p class="ball">4</p>
-            <p class="ball">5</p>
-            <p class="ball">6</p>
-            <p class="ball">7</p>
-            <br class="clearfix">
-            <p class="ball">8</p>
-            <p class="ball">9</p>
-            <p class="ball">10</p>
-            <p class="ball">11</p>
-            <p class="ball">12</p>
-            <p class="ball">13</p>
-            <p class="ball">14</p>
-            <br class="clearfix">
-            <p class="ball">15</p>
-            <p class="ball">16</p>
-            <p class="ball">17</p>
-            <p class="ball">18</p>
-            <p class="ball">19</p>
-            <p class="ball">20</p>
-            <p class="ball">21</p>
-            <br class="clearfix">
-            <p class="ball">22</p>
-            <p class="ball">23</p>
-            <p class="ball">24</p>
-            <p class="ball">25</p>
-            <p class="ball">26</p>
-            <p class="ball">27</p>
-            <p class="ball">28</p>
-            <br class="clearfix">
-            <p class="ball">29</p>
-            <p class="ball">30</p>
-            <p class="ball">31</p>
-            <p class="ball">32</p>
-            <p class="ball">33</p>
-            <p class="ball">34</p>
-            <p class="ball">35</p>
-            <br class="clearfix">
-            <p class="ball">36</p>
-            <p class="ball">37</p>
-            <p class="ball">38</p>
-            <p class="ball">39</p>
-            <p class="ball">40</p>
-            <p class="ball">41</p>
-            <p class="ball">42</p>
-            <br class="clearfix">
-            <p class="ball">43</p>
-            <p class="ball">44</p>
-            <p class="ball">45</p>
-            <p class="ball">46</p>
-            <p class="ball">47</p>
-            <p class="ball">48</p>
-            <p class="ball">49</p>
-            
-        </div>
+                        <div class="tickets_generate">
+                                <h1>Lotto Generator</h1>
 
-    </div>
+                                <div class="tiraj_sel">
+                                    <h2> Тираж    №5 </h2>
+                                    <div class="col_tiraj">
+                                        <div class="col_h3">
+                                            Количество тиражей:
+                                        </div>
+                                        <div class="col" id="col_tiraj_1" data-num-tiraj="1">1 </div>
+                                        <div class="col" id="col_tiraj_2" data-num-tiraj="2">2</div>
+                                        <div class="col" id="col_tiraj_3" data-num-tiraj="3">3 </div>
+                                        <div class="col" id="col_tiraj_4" data-num-tiraj="4">4</div>
+                                        <div class="col" id="col_tiraj_5" data-num-tiraj="5">5</div>
+                                        <div class="col" id="col_tiraj_6" data-num-tiraj="6">6</div>
+                                    </div>
+                                    <br class="clearfix">
+                                    <div class="col_tiraj">
+                                        <div class="col_h3">
+                                            Количество полей:
+                                        </div>
+                                        <div class="col" id="col_ticket_3" data-num="3">3</div>
+                                        <div class="col" id="col_ticket_6" data-num="6">6</div>
+                                        <div class="col" id="col_ticket_9" data-num="9">9</div>
+                                        <div class="col" id="col_ticket_12" data-num="12">12</div>
+                                        <div class="col" id="col_ticket_15" data-num="15">15</div>
+                                    </div>
 
-    <button type="button" id="generate" class="clearfix">Generate</button>
+                                    </div>
+                                    <br class="clearfix">
+
+
+                                        <div id="ticket_boxes_1" class="wrapper ticket_boxes">
+                                            <button type="button" id="generate" class="generate clearfix">Авто-выбор</button>
+                                            <div class="">
+                                                <p class="ball">1</p>
+                                                <p class="ball">2</p>
+                                                <p class="ball">3</p>
+                                                <p class="ball">4</p>
+                                                <p class="ball">5</p>
+                                                <p class="ball">6</p>
+                                                <p class="ball">7</p>
+                                                <br class="clearfix">
+                                                <p class="ball">8</p>
+                                                <p class="ball">9</p>
+                                                <p class="ball">10</p>
+                                                <p class="ball">11</p>
+                                                <p class="ball">12</p>
+                                                <p class="ball">13</p>
+                                                <p class="ball">14</p>
+                                                <br class="clearfix">
+                                                <p class="ball">15</p>
+                                                <p class="ball">16</p>
+                                                <p class="ball">17</p>
+                                                <p class="ball">18</p>
+                                                <p class="ball">19</p>
+                                                <p class="ball">20</p>
+                                                <p class="ball">21</p>
+                                                <br class="clearfix">
+                                                <p class="ball">22</p>
+                                                <p class="ball">23</p>
+                                                <p class="ball">24</p>
+                                                <p class="ball">25</p>
+                                                <p class="ball">26</p>
+                                                <p class="ball">27</p>
+                                                <p class="ball">28</p>
+                                                <br class="clearfix">
+                                                <p class="ball">29</p>
+                                                <p class="ball">30</p>
+                                                <p class="ball">31</p>
+                                                <p class="ball">32</p>
+                                                <p class="ball">33</p>
+                                                <p class="ball">34</p>
+                                                <p class="ball">35</p>
+                                                <br class="clearfix">
+                                                <p class="ball">36</p>
+                                                <p class="ball">37</p>
+                                                <p class="ball">38</p>
+                                                <p class="ball">39</p>
+                                                <p class="ball">40</p>
+                                                <p class="ball">41</p>
+                                                <p class="ball">42</p>
+                                                <br class="clearfix">
+                                                <p class="ball">43</p>
+                                                <p class="ball">44</p>
+                                                <p class="ball">45</p>
+                                                <p class="ball">46</p>
+                                                <p class="ball">47</p>
+                                                <p class="ball">48</p>
+                                                <p class="ball">49</p>
+
+                                            </div>
+                                            <button type="button" id="confirm" class="confirm clearfix">Подтвердить выбор</button>
+
+                                        </div>
+
+                                        <div id="ticket_boxes_2" class="wrapper ticket_boxes">
+                                            <button type="button" id="generate" class="generate clearfix">Авто-выбор</button>
+                                            <div>
+                                                <p class="ball">1</p>
+                                                <p class="ball">2</p>
+                                                <p class="ball">3</p>
+                                                <p class="ball">4</p>
+                                                <p class="ball">5</p>
+                                                <p class="ball">6</p>
+                                                <p class="ball">7</p>
+                                                <br class="clearfix">
+                                                <p class="ball">8</p>
+                                                <p class="ball">9</p>
+                                                <p class="ball">10</p>
+                                                <p class="ball">11</p>
+                                                <p class="ball">12</p>
+                                                <p class="ball">13</p>
+                                                <p class="ball">14</p>
+                                                <br class="clearfix">
+                                                <p class="ball">15</p>
+                                                <p class="ball">16</p>
+                                                <p class="ball">17</p>
+                                                <p class="ball">18</p>
+                                                <p class="ball">19</p>
+                                                <p class="ball">20</p>
+                                                <p class="ball">21</p>
+                                                <br class="clearfix">
+                                                <p class="ball">22</p>
+                                                <p class="ball">23</p>
+                                                <p class="ball">24</p>
+                                                <p class="ball">25</p>
+                                                <p class="ball">26</p>
+                                                <p class="ball">27</p>
+                                                <p class="ball">28</p>
+                                                <br class="clearfix">
+                                                <p class="ball">29</p>
+                                                <p class="ball">30</p>
+                                                <p class="ball">31</p>
+                                                <p class="ball">32</p>
+                                                <p class="ball">33</p>
+                                                <p class="ball">34</p>
+                                                <p class="ball">35</p>
+                                                <br class="clearfix">
+                                                <p class="ball">36</p>
+                                                <p class="ball">37</p>
+                                                <p class="ball">38</p>
+                                                <p class="ball">39</p>
+                                                <p class="ball">40</p>
+                                                <p class="ball">41</p>
+                                                <p class="ball">42</p>
+                                                <br class="clearfix">
+                                                <p class="ball">43</p>
+                                                <p class="ball">44</p>
+                                                <p class="ball">45</p>
+                                                <p class="ball">46</p>
+                                                <p class="ball">47</p>
+                                                <p class="ball">48</p>
+                                                <p class="ball">49</p>
+                                            </div>
+                                            <button type="button" id="confirm" class="confirm clearfix">Подтвердить выбор</button>
+                                        </div>
+
+
+                                        <div id="ticket_boxes_3" class="wrapper ticket_boxes">
+                                            <button type="button" id="generate" class="generate clearfix">Авто-выбор</button>
+                                            <div>
+                                                <p class="ball">1</p>
+                                                <p class="ball">2</p>
+                                                <p class="ball">3</p>
+                                                <p class="ball">4</p>
+                                                <p class="ball">5</p>
+                                                <p class="ball">6</p>
+                                                <p class="ball">7</p>
+                                                <br class="clearfix">
+                                                <p class="ball">8</p>
+                                                <p class="ball">9</p>
+                                                <p class="ball">10</p>
+                                                <p class="ball">11</p>
+                                                <p class="ball">12</p>
+                                                <p class="ball">13</p>
+                                                <p class="ball">14</p>
+                                                <br class="clearfix">
+                                                <p class="ball">15</p>
+                                                <p class="ball">16</p>
+                                                <p class="ball">17</p>
+                                                <p class="ball">18</p>
+                                                <p class="ball">19</p>
+                                                <p class="ball">20</p>
+                                                <p class="ball">21</p>
+                                                <br class="clearfix">
+                                                <p class="ball">22</p>
+                                                <p class="ball">23</p>
+                                                <p class="ball">24</p>
+                                                <p class="ball">25</p>
+                                                <p class="ball">26</p>
+                                                <p class="ball">27</p>
+                                                <p class="ball">28</p>
+                                                <br class="clearfix">
+                                                <p class="ball">29</p>
+                                                <p class="ball">30</p>
+                                                <p class="ball">31</p>
+                                                <p class="ball">32</p>
+                                                <p class="ball">33</p>
+                                                <p class="ball">34</p>
+                                                <p class="ball">35</p>
+                                                <br class="clearfix">
+                                                <p class="ball">36</p>
+                                                <p class="ball">37</p>
+                                                <p class="ball">38</p>
+                                                <p class="ball">39</p>
+                                                <p class="ball">40</p>
+                                                <p class="ball">41</p>
+                                                <p class="ball">42</p>
+                                                <br class="clearfix">
+                                                <p class="ball">43</p>
+                                                <p class="ball">44</p>
+                                                <p class="ball">45</p>
+                                                <p class="ball">46</p>
+                                                <p class="ball">47</p>
+                                                <p class="ball">48</p>
+                                                <p class="ball">49</p>
+                                            </div>
+                                            <button type="button" id="confirm" class="confirm clearfix">Подтвердить выбор</button>
+                                        </div>
+
+
+                                        <div id="ticket_boxes_4" class="wrapper ticket_boxes">
+                                                        <button type="button" id="generate" class="generate clearfix">Авто-выбор</button>
+                                                        <div>
+                                                            <p class="ball">1</p>
+                                                            <p class="ball">2</p>
+                                                            <p class="ball">3</p>
+                                                            <p class="ball">4</p>
+                                                            <p class="ball">5</p>
+                                                            <p class="ball">6</p>
+                                                            <p class="ball">7</p>
+                                                            <br class="clearfix">
+                                                            <p class="ball">8</p>
+                                                            <p class="ball">9</p>
+                                                            <p class="ball">10</p>
+                                                            <p class="ball">11</p>
+                                                            <p class="ball">12</p>
+                                                            <p class="ball">13</p>
+                                                            <p class="ball">14</p>
+                                                            <br class="clearfix">
+                                                            <p class="ball">15</p>
+                                                            <p class="ball">16</p>
+                                                            <p class="ball">17</p>
+                                                            <p class="ball">18</p>
+                                                            <p class="ball">19</p>
+                                                            <p class="ball">20</p>
+                                                            <p class="ball">21</p>
+                                                            <br class="clearfix">
+                                                            <p class="ball">22</p>
+                                                            <p class="ball">23</p>
+                                                            <p class="ball">24</p>
+                                                            <p class="ball">25</p>
+                                                            <p class="ball">26</p>
+                                                            <p class="ball">27</p>
+                                                            <p class="ball">28</p>
+                                                            <br class="clearfix">
+                                                            <p class="ball">29</p>
+                                                            <p class="ball">30</p>
+                                                            <p class="ball">31</p>
+                                                            <p class="ball">32</p>
+                                                            <p class="ball">33</p>
+                                                            <p class="ball">34</p>
+                                                            <p class="ball">35</p>
+                                                            <br class="clearfix">
+                                                            <p class="ball">36</p>
+                                                            <p class="ball">37</p>
+                                                            <p class="ball">38</p>
+                                                            <p class="ball">39</p>
+                                                            <p class="ball">40</p>
+                                                            <p class="ball">41</p>
+                                                            <p class="ball">42</p>
+                                                            <br class="clearfix">
+                                                            <p class="ball">43</p>
+                                                            <p class="ball">44</p>
+                                                            <p class="ball">45</p>
+                                                            <p class="ball">46</p>
+                                                            <p class="ball">47</p>
+                                                            <p class="ball">48</p>
+                                                            <p class="ball">49</p>
+                                                        </div>
+                                            <button type="button" id="confirm" class="confirm clearfix">Подтвердить выбор</button>
+                                                    </div>
+
+                                        <div id="ticket_boxes_5" class="wrapper ticket_boxes">
+                                                        <button type="button" id="generate" class="generate clearfix">Авто-выбор</button>
+                                                        <div>
+                                                            <p class="ball">1</p>
+                                                            <p class="ball">2</p>
+                                                            <p class="ball">3</p>
+                                                            <p class="ball">4</p>
+                                                            <p class="ball">5</p>
+                                                            <p class="ball">6</p>
+                                                            <p class="ball">7</p>
+                                                            <br class="clearfix">
+                                                            <p class="ball">8</p>
+                                                            <p class="ball">9</p>
+                                                            <p class="ball">10</p>
+                                                            <p class="ball">11</p>
+                                                            <p class="ball">12</p>
+                                                            <p class="ball">13</p>
+                                                            <p class="ball">14</p>
+                                                            <br class="clearfix">
+                                                            <p class="ball">15</p>
+                                                            <p class="ball">16</p>
+                                                            <p class="ball">17</p>
+                                                            <p class="ball">18</p>
+                                                            <p class="ball">19</p>
+                                                            <p class="ball">20</p>
+                                                            <p class="ball">21</p>
+                                                            <br class="clearfix">
+                                                            <p class="ball">22</p>
+                                                            <p class="ball">23</p>
+                                                            <p class="ball">24</p>
+                                                            <p class="ball">25</p>
+                                                            <p class="ball">26</p>
+                                                            <p class="ball">27</p>
+                                                            <p class="ball">28</p>
+                                                            <br class="clearfix">
+                                                            <p class="ball">29</p>
+                                                            <p class="ball">30</p>
+                                                            <p class="ball">31</p>
+                                                            <p class="ball">32</p>
+                                                            <p class="ball">33</p>
+                                                            <p class="ball">34</p>
+                                                            <p class="ball">35</p>
+                                                            <br class="clearfix">
+                                                            <p class="ball">36</p>
+                                                            <p class="ball">37</p>
+                                                            <p class="ball">38</p>
+                                                            <p class="ball">39</p>
+                                                            <p class="ball">40</p>
+                                                            <p class="ball">41</p>
+                                                            <p class="ball">42</p>
+                                                            <br class="clearfix">
+                                                            <p class="ball">43</p>
+                                                            <p class="ball">44</p>
+                                                            <p class="ball">45</p>
+                                                            <p class="ball">46</p>
+                                                            <p class="ball">47</p>
+                                                            <p class="ball">48</p>
+                                                            <p class="ball">49</p>
+                                                        </div>
+                                            <button type="button" id="confirm" class="confirm clearfix">Подтвердить выбор</button>
+                                                    </div>
+
+                                        <div id="ticket_boxes_6" class="wrapper ticket_boxes">
+                                                        <button type="button" id="generate" class="generate clearfix">Авто-выбор</button>
+                                                        <div>
+                                                            <p class="ball">1</p>
+                                                            <p class="ball">2</p>
+                                                            <p class="ball">3</p>
+                                                            <p class="ball">4</p>
+                                                            <p class="ball">5</p>
+                                                            <p class="ball">6</p>
+                                                            <p class="ball">7</p>
+                                                            <br class="clearfix">
+                                                            <p class="ball">8</p>
+                                                            <p class="ball">9</p>
+                                                            <p class="ball">10</p>
+                                                            <p class="ball">11</p>
+                                                            <p class="ball">12</p>
+                                                            <p class="ball">13</p>
+                                                            <p class="ball">14</p>
+                                                            <br class="clearfix">
+                                                            <p class="ball">15</p>
+                                                            <p class="ball">16</p>
+                                                            <p class="ball">17</p>
+                                                            <p class="ball">18</p>
+                                                            <p class="ball">19</p>
+                                                            <p class="ball">20</p>
+                                                            <p class="ball">21</p>
+                                                            <br class="clearfix">
+                                                            <p class="ball">22</p>
+                                                            <p class="ball">23</p>
+                                                            <p class="ball">24</p>
+                                                            <p class="ball">25</p>
+                                                            <p class="ball">26</p>
+                                                            <p class="ball">27</p>
+                                                            <p class="ball">28</p>
+                                                            <br class="clearfix">
+                                                            <p class="ball">29</p>
+                                                            <p class="ball">30</p>
+                                                            <p class="ball">31</p>
+                                                            <p class="ball">32</p>
+                                                            <p class="ball">33</p>
+                                                            <p class="ball">34</p>
+                                                            <p class="ball">35</p>
+                                                            <br class="clearfix">
+                                                            <p class="ball">36</p>
+                                                            <p class="ball">37</p>
+                                                            <p class="ball">38</p>
+                                                            <p class="ball">39</p>
+                                                            <p class="ball">40</p>
+                                                            <p class="ball">41</p>
+                                                            <p class="ball">42</p>
+                                                            <br class="clearfix">
+                                                            <p class="ball">43</p>
+                                                            <p class="ball">44</p>
+                                                            <p class="ball">45</p>
+                                                            <p class="ball">46</p>
+                                                            <p class="ball">47</p>
+                                                            <p class="ball">48</p>
+                                                            <p class="ball">49</p>
+                                                        </div>
+                                            <button type="button" id="confirm" class="confirm clearfix">Подтвердить выбор</button>
+                                                    </div>
+
+                                         <div id="ticket_boxes_7" class="wrapper ticket_boxes">
+                                                        <button type="button" id="generate" class="generate clearfix">Авто-выбор</button>
+                                                        <div>
+                                                            <p class="ball">1</p>
+                                                            <p class="ball">2</p>
+                                                            <p class="ball">3</p>
+                                                            <p class="ball">4</p>
+                                                            <p class="ball">5</p>
+                                                            <p class="ball">6</p>
+                                                            <p class="ball">7</p>
+                                                            <br class="clearfix">
+                                                            <p class="ball">8</p>
+                                                            <p class="ball">9</p>
+                                                            <p class="ball">10</p>
+                                                            <p class="ball">11</p>
+                                                            <p class="ball">12</p>
+                                                            <p class="ball">13</p>
+                                                            <p class="ball">14</p>
+                                                            <br class="clearfix">
+                                                            <p class="ball">15</p>
+                                                            <p class="ball">16</p>
+                                                            <p class="ball">17</p>
+                                                            <p class="ball">18</p>
+                                                            <p class="ball">19</p>
+                                                            <p class="ball">20</p>
+                                                            <p class="ball">21</p>
+                                                            <br class="clearfix">
+                                                            <p class="ball">22</p>
+                                                            <p class="ball">23</p>
+                                                            <p class="ball">24</p>
+                                                            <p class="ball">25</p>
+                                                            <p class="ball">26</p>
+                                                            <p class="ball">27</p>
+                                                            <p class="ball">28</p>
+                                                            <br class="clearfix">
+                                                            <p class="ball">29</p>
+                                                            <p class="ball">30</p>
+                                                            <p class="ball">31</p>
+                                                            <p class="ball">32</p>
+                                                            <p class="ball">33</p>
+                                                            <p class="ball">34</p>
+                                                            <p class="ball">35</p>
+                                                            <br class="clearfix">
+                                                            <p class="ball">36</p>
+                                                            <p class="ball">37</p>
+                                                            <p class="ball">38</p>
+                                                            <p class="ball">39</p>
+                                                            <p class="ball">40</p>
+                                                            <p class="ball">41</p>
+                                                            <p class="ball">42</p>
+                                                            <br class="clearfix">
+                                                            <p class="ball">43</p>
+                                                            <p class="ball">44</p>
+                                                            <p class="ball">45</p>
+                                                            <p class="ball">46</p>
+                                                            <p class="ball">47</p>
+                                                            <p class="ball">48</p>
+                                                            <p class="ball">49</p>
+                                                        </div>
+                                             <button type="button" id="confirm" class="confirm clearfix">Подтвердить выбор</button>
+                                                    </div>
+                                        <div id="ticket_boxes_8" class="wrapper ticket_boxes">
+                                                        <button type="button" id="generate" class="generate clearfix">Авто-выбор</button>
+                                                        <div>
+                                                            <p class="ball">1</p>
+                                                            <p class="ball">2</p>
+                                                            <p class="ball">3</p>
+                                                            <p class="ball">4</p>
+                                                            <p class="ball">5</p>
+                                                            <p class="ball">6</p>
+                                                            <p class="ball">7</p>
+                                                            <br class="clearfix">
+                                                            <p class="ball">8</p>
+                                                            <p class="ball">9</p>
+                                                            <p class="ball">10</p>
+                                                            <p class="ball">11</p>
+                                                            <p class="ball">12</p>
+                                                            <p class="ball">13</p>
+                                                            <p class="ball">14</p>
+                                                            <br class="clearfix">
+                                                            <p class="ball">15</p>
+                                                            <p class="ball">16</p>
+                                                            <p class="ball">17</p>
+                                                            <p class="ball">18</p>
+                                                            <p class="ball">19</p>
+                                                            <p class="ball">20</p>
+                                                            <p class="ball">21</p>
+                                                            <br class="clearfix">
+                                                            <p class="ball">22</p>
+                                                            <p class="ball">23</p>
+                                                            <p class="ball">24</p>
+                                                            <p class="ball">25</p>
+                                                            <p class="ball">26</p>
+                                                            <p class="ball">27</p>
+                                                            <p class="ball">28</p>
+                                                            <br class="clearfix">
+                                                            <p class="ball">29</p>
+                                                            <p class="ball">30</p>
+                                                            <p class="ball">31</p>
+                                                            <p class="ball">32</p>
+                                                            <p class="ball">33</p>
+                                                            <p class="ball">34</p>
+                                                            <p class="ball">35</p>
+                                                            <br class="clearfix">
+                                                            <p class="ball">36</p>
+                                                            <p class="ball">37</p>
+                                                            <p class="ball">38</p>
+                                                            <p class="ball">39</p>
+                                                            <p class="ball">40</p>
+                                                            <p class="ball">41</p>
+                                                            <p class="ball">42</p>
+                                                            <br class="clearfix">
+                                                            <p class="ball">43</p>
+                                                            <p class="ball">44</p>
+                                                            <p class="ball">45</p>
+                                                            <p class="ball">46</p>
+                                                            <p class="ball">47</p>
+                                                            <p class="ball">48</p>
+                                                            <p class="ball">49</p>
+                                                        </div>
+                                            <button type="button" id="confirm" class="confirm clearfix">Подтвердить выбор</button>
+                                                    </div>
+                                        <div id="ticket_boxes_9" class="wrapper ticket_boxes">
+                                                        <button type="button" id="generate" class="generate clearfix">Авто-выбор</button>
+                                                        <div>
+                                                            <p class="ball">1</p>
+                                                            <p class="ball">2</p>
+                                                            <p class="ball">3</p>
+                                                            <p class="ball">4</p>
+                                                            <p class="ball">5</p>
+                                                            <p class="ball">6</p>
+                                                            <p class="ball">7</p>
+                                                            <br class="clearfix">
+                                                            <p class="ball">8</p>
+                                                            <p class="ball">9</p>
+                                                            <p class="ball">10</p>
+                                                            <p class="ball">11</p>
+                                                            <p class="ball">12</p>
+                                                            <p class="ball">13</p>
+                                                            <p class="ball">14</p>
+                                                            <br class="clearfix">
+                                                            <p class="ball">15</p>
+                                                            <p class="ball">16</p>
+                                                            <p class="ball">17</p>
+                                                            <p class="ball">18</p>
+                                                            <p class="ball">19</p>
+                                                            <p class="ball">20</p>
+                                                            <p class="ball">21</p>
+                                                            <br class="clearfix">
+                                                            <p class="ball">22</p>
+                                                            <p class="ball">23</p>
+                                                            <p class="ball">24</p>
+                                                            <p class="ball">25</p>
+                                                            <p class="ball">26</p>
+                                                            <p class="ball">27</p>
+                                                            <p class="ball">28</p>
+                                                            <br class="clearfix">
+                                                            <p class="ball">29</p>
+                                                            <p class="ball">30</p>
+                                                            <p class="ball">31</p>
+                                                            <p class="ball">32</p>
+                                                            <p class="ball">33</p>
+                                                            <p class="ball">34</p>
+                                                            <p class="ball">35</p>
+                                                            <br class="clearfix">
+                                                            <p class="ball">36</p>
+                                                            <p class="ball">37</p>
+                                                            <p class="ball">38</p>
+                                                            <p class="ball">39</p>
+                                                            <p class="ball">40</p>
+                                                            <p class="ball">41</p>
+                                                            <p class="ball">42</p>
+                                                            <br class="clearfix">
+                                                            <p class="ball">43</p>
+                                                            <p class="ball">44</p>
+                                                            <p class="ball">45</p>
+                                                            <p class="ball">46</p>
+                                                            <p class="ball">47</p>
+                                                            <p class="ball">48</p>
+                                                            <p class="ball">49</p>
+                                                        </div>
+                                            <button type="button" id="confirm" class="confirm clearfix">Подтвердить выбор</button>
+                                                    </div>
+
+                                        <div id="ticket_boxes_10" class="wrapper ticket_boxes">
+                                                        <button type="button" id="generate" class="generate clearfix">Авто-выбор</button>
+                                                        <div>
+                                                            <p class="ball">1</p>
+                                                            <p class="ball">2</p>
+                                                            <p class="ball">3</p>
+                                                            <p class="ball">4</p>
+                                                            <p class="ball">5</p>
+                                                            <p class="ball">6</p>
+                                                            <p class="ball">7</p>
+                                                            <br class="clearfix">
+                                                            <p class="ball">8</p>
+                                                            <p class="ball">9</p>
+                                                            <p class="ball">10</p>
+                                                            <p class="ball">11</p>
+                                                            <p class="ball">12</p>
+                                                            <p class="ball">13</p>
+                                                            <p class="ball">14</p>
+                                                            <br class="clearfix">
+                                                            <p class="ball">15</p>
+                                                            <p class="ball">16</p>
+                                                            <p class="ball">17</p>
+                                                            <p class="ball">18</p>
+                                                            <p class="ball">19</p>
+                                                            <p class="ball">20</p>
+                                                            <p class="ball">21</p>
+                                                            <br class="clearfix">
+                                                            <p class="ball">22</p>
+                                                            <p class="ball">23</p>
+                                                            <p class="ball">24</p>
+                                                            <p class="ball">25</p>
+                                                            <p class="ball">26</p>
+                                                            <p class="ball">27</p>
+                                                            <p class="ball">28</p>
+                                                            <br class="clearfix">
+                                                            <p class="ball">29</p>
+                                                            <p class="ball">30</p>
+                                                            <p class="ball">31</p>
+                                                            <p class="ball">32</p>
+                                                            <p class="ball">33</p>
+                                                            <p class="ball">34</p>
+                                                            <p class="ball">35</p>
+                                                            <br class="clearfix">
+                                                            <p class="ball">36</p>
+                                                            <p class="ball">37</p>
+                                                            <p class="ball">38</p>
+                                                            <p class="ball">39</p>
+                                                            <p class="ball">40</p>
+                                                            <p class="ball">41</p>
+                                                            <p class="ball">42</p>
+                                                            <br class="clearfix">
+                                                            <p class="ball">43</p>
+                                                            <p class="ball">44</p>
+                                                            <p class="ball">45</p>
+                                                            <p class="ball">46</p>
+                                                            <p class="ball">47</p>
+                                                            <p class="ball">48</p>
+                                                            <p class="ball">49</p>
+                                                        </div>
+                                            <button type="button" id="confirm" class="confirm clearfix">Подтвердить выбор</button>
+                                                    </div>
+                                <div id="ticket_boxes_11" class="wrapper ticket_boxes">
+                                    <button type="button" id="generate" class="generate clearfix">Авто-выбор</button>
+                                    <div>
+                                        <p class="ball">1</p>
+                                        <p class="ball">2</p>
+                                        <p class="ball">3</p>
+                                        <p class="ball">4</p>
+                                        <p class="ball">5</p>
+                                        <p class="ball">6</p>
+                                        <p class="ball">7</p>
+                                        <br class="clearfix">
+                                        <p class="ball">8</p>
+                                        <p class="ball">9</p>
+                                        <p class="ball">10</p>
+                                        <p class="ball">11</p>
+                                        <p class="ball">12</p>
+                                        <p class="ball">13</p>
+                                        <p class="ball">14</p>
+                                        <br class="clearfix">
+                                        <p class="ball">15</p>
+                                        <p class="ball">16</p>
+                                        <p class="ball">17</p>
+                                        <p class="ball">18</p>
+                                        <p class="ball">19</p>
+                                        <p class="ball">20</p>
+                                        <p class="ball">21</p>
+                                        <br class="clearfix">
+                                        <p class="ball">22</p>
+                                        <p class="ball">23</p>
+                                        <p class="ball">24</p>
+                                        <p class="ball">25</p>
+                                        <p class="ball">26</p>
+                                        <p class="ball">27</p>
+                                        <p class="ball">28</p>
+                                        <br class="clearfix">
+                                        <p class="ball">29</p>
+                                        <p class="ball">30</p>
+                                        <p class="ball">31</p>
+                                        <p class="ball">32</p>
+                                        <p class="ball">33</p>
+                                        <p class="ball">34</p>
+                                        <p class="ball">35</p>
+                                        <br class="clearfix">
+                                        <p class="ball">36</p>
+                                        <p class="ball">37</p>
+                                        <p class="ball">38</p>
+                                        <p class="ball">39</p>
+                                        <p class="ball">40</p>
+                                        <p class="ball">41</p>
+                                        <p class="ball">42</p>
+                                        <br class="clearfix">
+                                        <p class="ball">43</p>
+                                        <p class="ball">44</p>
+                                        <p class="ball">45</p>
+                                        <p class="ball">46</p>
+                                        <p class="ball">47</p>
+                                        <p class="ball">48</p>
+                                        <p class="ball">49</p>
+                                    </div>
+                                    <button type="button" id="confirm" class="confirm clearfix">Подтвердить выбор</button>
+                                </div>
+
+                                <div id="ticket_boxes_12" class="wrapper ticket_boxes">
+                                    <button type="button" id="generate" class="generate clearfix">Авто-выбор</button>
+                                    <div>
+                                        <p class="ball">1</p>
+                                        <p class="ball">2</p>
+                                        <p class="ball">3</p>
+                                        <p class="ball">4</p>
+                                        <p class="ball">5</p>
+                                        <p class="ball">6</p>
+                                        <p class="ball">7</p>
+                                        <br class="clearfix">
+                                        <p class="ball">8</p>
+                                        <p class="ball">9</p>
+                                        <p class="ball">10</p>
+                                        <p class="ball">11</p>
+                                        <p class="ball">12</p>
+                                        <p class="ball">13</p>
+                                        <p class="ball">14</p>
+                                        <br class="clearfix">
+                                        <p class="ball">15</p>
+                                        <p class="ball">16</p>
+                                        <p class="ball">17</p>
+                                        <p class="ball">18</p>
+                                        <p class="ball">19</p>
+                                        <p class="ball">20</p>
+                                        <p class="ball">21</p>
+                                        <br class="clearfix">
+                                        <p class="ball">22</p>
+                                        <p class="ball">23</p>
+                                        <p class="ball">24</p>
+                                        <p class="ball">25</p>
+                                        <p class="ball">26</p>
+                                        <p class="ball">27</p>
+                                        <p class="ball">28</p>
+                                        <br class="clearfix">
+                                        <p class="ball">29</p>
+                                        <p class="ball">30</p>
+                                        <p class="ball">31</p>
+                                        <p class="ball">32</p>
+                                        <p class="ball">33</p>
+                                        <p class="ball">34</p>
+                                        <p class="ball">35</p>
+                                        <br class="clearfix">
+                                        <p class="ball">36</p>
+                                        <p class="ball">37</p>
+                                        <p class="ball">38</p>
+                                        <p class="ball">39</p>
+                                        <p class="ball">40</p>
+                                        <p class="ball">41</p>
+                                        <p class="ball">42</p>
+                                        <br class="clearfix">
+                                        <p class="ball">43</p>
+                                        <p class="ball">44</p>
+                                        <p class="ball">45</p>
+                                        <p class="ball">46</p>
+                                        <p class="ball">47</p>
+                                        <p class="ball">48</p>
+                                        <p class="ball">49</p>
+                                    </div>
+                                    <button type="button" id="confirm" class="confirm clearfix">Подтвердить выбор</button>
+                                </div>
+                                <div id="ticket_boxes_13" class="wrapper ticket_boxes">
+                                    <button type="button" id="generate" class="generate clearfix">Авто-выбор</button>
+                                    <div>
+                                        <p class="ball">1</p>
+                                        <p class="ball">2</p>
+                                        <p class="ball">3</p>
+                                        <p class="ball">4</p>
+                                        <p class="ball">5</p>
+                                        <p class="ball">6</p>
+                                        <p class="ball">7</p>
+                                        <br class="clearfix">
+                                        <p class="ball">8</p>
+                                        <p class="ball">9</p>
+                                        <p class="ball">10</p>
+                                        <p class="ball">11</p>
+                                        <p class="ball">12</p>
+                                        <p class="ball">13</p>
+                                        <p class="ball">14</p>
+                                        <br class="clearfix">
+                                        <p class="ball">15</p>
+                                        <p class="ball">16</p>
+                                        <p class="ball">17</p>
+                                        <p class="ball">18</p>
+                                        <p class="ball">19</p>
+                                        <p class="ball">20</p>
+                                        <p class="ball">21</p>
+                                        <br class="clearfix">
+                                        <p class="ball">22</p>
+                                        <p class="ball">23</p>
+                                        <p class="ball">24</p>
+                                        <p class="ball">25</p>
+                                        <p class="ball">26</p>
+                                        <p class="ball">27</p>
+                                        <p class="ball">28</p>
+                                        <br class="clearfix">
+                                        <p class="ball">29</p>
+                                        <p class="ball">30</p>
+                                        <p class="ball">31</p>
+                                        <p class="ball">32</p>
+                                        <p class="ball">33</p>
+                                        <p class="ball">34</p>
+                                        <p class="ball">35</p>
+                                        <br class="clearfix">
+                                        <p class="ball">36</p>
+                                        <p class="ball">37</p>
+                                        <p class="ball">38</p>
+                                        <p class="ball">39</p>
+                                        <p class="ball">40</p>
+                                        <p class="ball">41</p>
+                                        <p class="ball">42</p>
+                                        <br class="clearfix">
+                                        <p class="ball">43</p>
+                                        <p class="ball">44</p>
+                                        <p class="ball">45</p>
+                                        <p class="ball">46</p>
+                                        <p class="ball">47</p>
+                                        <p class="ball">48</p>
+                                        <p class="ball">49</p>
+                                    </div>
+                                    <button type="button" id="confirm" class="confirm clearfix">Подтвердить выбор</button>
+                                </div>
+                                <div id="ticket_boxes_14" class="wrapper ticket_boxes">
+                                    <button type="button" id="generate" class="generate clearfix">Авто-выбор</button>
+                                    <div>
+                                        <p class="ball">1</p>
+                                        <p class="ball">2</p>
+                                        <p class="ball">3</p>
+                                        <p class="ball">4</p>
+                                        <p class="ball">5</p>
+                                        <p class="ball">6</p>
+                                        <p class="ball">7</p>
+                                        <br class="clearfix">
+                                        <p class="ball">8</p>
+                                        <p class="ball">9</p>
+                                        <p class="ball">10</p>
+                                        <p class="ball">11</p>
+                                        <p class="ball">12</p>
+                                        <p class="ball">13</p>
+                                        <p class="ball">14</p>
+                                        <br class="clearfix">
+                                        <p class="ball">15</p>
+                                        <p class="ball">16</p>
+                                        <p class="ball">17</p>
+                                        <p class="ball">18</p>
+                                        <p class="ball">19</p>
+                                        <p class="ball">20</p>
+                                        <p class="ball">21</p>
+                                        <br class="clearfix">
+                                        <p class="ball">22</p>
+                                        <p class="ball">23</p>
+                                        <p class="ball">24</p>
+                                        <p class="ball">25</p>
+                                        <p class="ball">26</p>
+                                        <p class="ball">27</p>
+                                        <p class="ball">28</p>
+                                        <br class="clearfix">
+                                        <p class="ball">29</p>
+                                        <p class="ball">30</p>
+                                        <p class="ball">31</p>
+                                        <p class="ball">32</p>
+                                        <p class="ball">33</p>
+                                        <p class="ball">34</p>
+                                        <p class="ball">35</p>
+                                        <br class="clearfix">
+                                        <p class="ball">36</p>
+                                        <p class="ball">37</p>
+                                        <p class="ball">38</p>
+                                        <p class="ball">39</p>
+                                        <p class="ball">40</p>
+                                        <p class="ball">41</p>
+                                        <p class="ball">42</p>
+                                        <br class="clearfix">
+                                        <p class="ball">43</p>
+                                        <p class="ball">44</p>
+                                        <p class="ball">45</p>
+                                        <p class="ball">46</p>
+                                        <p class="ball">47</p>
+                                        <p class="ball">48</p>
+                                        <p class="ball">49</p>
+                                    </div>
+                                    <button type="button" id="confirm" class="confirm clearfix">Подтвердить выбор</button>
+                                </div>
+
+                                <div id="ticket_boxes_15" class="wrapper ticket_boxes">
+                                    <button type="button" id="generate" class="generate clearfix">Авто-выбор</button>
+                                    <div>
+                                        <p class="ball">1</p>
+                                        <p class="ball">2</p>
+                                        <p class="ball">3</p>
+                                        <p class="ball">4</p>
+                                        <p class="ball">5</p>
+                                        <p class="ball">6</p>
+                                        <p class="ball">7</p>
+                                        <br class="clearfix">
+                                        <p class="ball">8</p>
+                                        <p class="ball">9</p>
+                                        <p class="ball">10</p>
+                                        <p class="ball">11</p>
+                                        <p class="ball">12</p>
+                                        <p class="ball">13</p>
+                                        <p class="ball">14</p>
+                                        <br class="clearfix">
+                                        <p class="ball">15</p>
+                                        <p class="ball">16</p>
+                                        <p class="ball">17</p>
+                                        <p class="ball">18</p>
+                                        <p class="ball">19</p>
+                                        <p class="ball">20</p>
+                                        <p class="ball">21</p>
+                                        <br class="clearfix">
+                                        <p class="ball">22</p>
+                                        <p class="ball">23</p>
+                                        <p class="ball">24</p>
+                                        <p class="ball">25</p>
+                                        <p class="ball">26</p>
+                                        <p class="ball">27</p>
+                                        <p class="ball">28</p>
+                                        <br class="clearfix">
+                                        <p class="ball">29</p>
+                                        <p class="ball">30</p>
+                                        <p class="ball">31</p>
+                                        <p class="ball">32</p>
+                                        <p class="ball">33</p>
+                                        <p class="ball">34</p>
+                                        <p class="ball">35</p>
+                                        <br class="clearfix">
+                                        <p class="ball">36</p>
+                                        <p class="ball">37</p>
+                                        <p class="ball">38</p>
+                                        <p class="ball">39</p>
+                                        <p class="ball">40</p>
+                                        <p class="ball">41</p>
+                                        <p class="ball">42</p>
+                                        <br class="clearfix">
+                                        <p class="ball">43</p>
+                                        <p class="ball">44</p>
+                                        <p class="ball">45</p>
+                                        <p class="ball">46</p>
+                                        <p class="ball">47</p>
+                                        <p class="ball">48</p>
+                                        <p class="ball">49</p>
+                                    </div>
+                                    <button type="button" id="confirm" class="confirm clearfix">Подтвердить выбор</button>
+                                </div>
+
+
+                            <br class="clearfix">
+                            <br class="clearfix">
+
+                            <div class="tiraj_calculator">
+
+                                <div class="col_tiraj_cal">
+                                    <div class="col_h3">
+                                        Билетов в игре:
+                                    </div>
+                                    <div class="col_cal" id="col_tiraj_total" data-tiraj-total="4">4</div>
+
+                                    <br class="clearfix">
+                                    <div class="col_tiraj_cal">
+                                        <div class="col_h3">
+                                            Количество тиражей:
+                                        </div>
+                                        <div class="col_cal" id="col_ticket_total" data-ticket-total="3">3</div>
+
+                                    </div>
+                                    <br class="clearfix">
+                                    <div class="col_tiraj_cal">
+                                        <div class="col_h3">
+                                            Цена билета:
+                                        </div>
+                                        <div class="col_cal" id="col_ticket_price" data-ticket-price="1">1$</div>
+
+                                    </div>
+                                    <br class="clearfix">
+                                    <div class="col_tiraj_final_total">
+                                        <div class="col_h3">
+                                            Итого:
+                                        </div>
+                                        <div class="col_cal" id="tiiraje_amount" data-tiiraje-amount="1">2 </div>
+                                        <div class="col_cal" id="cal_mutiplier_1">Х</div>
+                                        <div class="col_cal" id="ticket_amount" data-ticket-amount="3">3</div>
+                                        <div class="col_cal" id="cal_mutiplier_2">Х</div>
+                                        <div class="col_cal" id="ticket_price" data-ticket-price="1">1$</div>
+                                        <div class="col_cal" id="cal_equal">=</div>
+                                        <div class="col_cal" id="cal_total" data-cal-total="">6</div>
+                                    </div>
+
+                                </div>
+                                <br class="clearfix">
+
+                                <button type="button" id="pay" class="pay clearfix">ОПЛАТИТЬ</button>
+
+                            </div>
+
+                        </div>
+                     <br class="clearfix">
+
+                </div>
 
 </body>
 
